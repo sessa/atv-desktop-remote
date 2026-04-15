@@ -36,6 +36,12 @@ macOS and Windows versions can be downloaded from here: https://github.com/bshar
 
 1. `electron-builder` is used to create a standalone application.
 
+### Downloading macOS builds from CI
+
+1. Open the **Actions** tab in GitHub.
+2. Run the **Build macOS app** workflow (or use any run triggered from `main`/PRs).
+3. Open the workflow run and download the `atv-remote-macos-<sha>` artifact.
+
 ## Notes
 
 This is cobbled together from a few projects I've worked on. It works well enough for me for daily use, so I figured others might like it. 
