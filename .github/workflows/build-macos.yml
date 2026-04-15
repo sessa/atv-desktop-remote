@@ -52,20 +52,17 @@ jobs:
       - name: Install app dependencies
         run: npm ci --prefix app --legacy-peer-deps
 
-      - name: Build unsigned macOS binaries
+      - name: Build arm64 macOS DMG (ad-hoc signed)
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: "false"
           CSC_FOR_PULL_REQUEST: "false"
-        run: npx electron-builder --mac --x64 --arm64 --publish never
+        run: npx electron-builder --mac dmg --arm64 --publish never -c.mac.identity=- -c.mac.hardenedRuntime=false
 
       - name: Upload macOS artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: atv-remote-macos-${{ github.sha }}
+          name: atv-remote-macos-arm64-${{ github.sha }}
           if-no-files-found: error
           retention-days: 14
           path: |
-            dist/*.dmg
-            dist/*.zip
-            dist/*.blockmap
-            dist/latest-mac.yml
+            dist/*arm64*.dmg

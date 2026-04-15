@@ -40,7 +40,9 @@ macOS and Windows versions can be downloaded from here: https://github.com/bshar
 
 1. Open the **Actions** tab in GitHub.
 2. Run the **Build macOS app** workflow (or use any run triggered from `main`/PRs).
-3. Open the workflow run and download the `atv-remote-macos-<sha>` artifact.
+3. Open the workflow run and download the `atv-remote-macos-arm64-<sha>` artifact.
+
+The workflow currently generates an Apple Silicon (`arm64`) DMG with ad-hoc signing for CI distribution.
 
 ## Notes
 
