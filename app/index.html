@@ -20,37 +20,38 @@
 
 
     <body class="remote-page">
-        <div class="pure-g">
-            <div class="pure-u-1-2">
-                <div id="alwaysOnTopWrapper">
-                    <span class="keyTextAlt">H - hide window</span>
+        <div class="remote-shell">
+            <div class="pure-g remote-top-row">
+                <div class="pure-u-1-2">
+                    <div id="alwaysOnTopWrapper">
+                        <span class="keyTextAlt">H - hide window</span>
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div id="exitLinkWrapper">
+                        <button id="exitLink" class="simpleButton"><span class="keyText">Quit</span><span class="keyTextAlt">Q (3x)</span></button>
+                    </div>
                 </div>
             </div>
-            <div class="pure-u-1-2">
-                <div id="exitLinkWrapper">
-                    <button id="exitLink" class="simpleButton"><span class="keyText">Quit</span><span class="keyTextAlt">Q (3x)</span></button>
+            <div class="center" id="keyboardButtonDiv">
+                <div class="topText">
+                    <span id="topTextHeader">ATV Remote</span>
                 </div>
-            </div>
-        </div>
-        <div class="center" id="keyboardButtonDiv">
-            <div class="topText">
-                <span id="topTextHeader">ATV Remote</span>
-            </div>
                 <div id="topTextKBLink">
                     <div onclick="openKeyboardClick(event)">
                         <span class="keyTextAlt">K</span>
                         <span class="keyText">Open Keyboard</span>
                     </div>
-                </div>    
-            
-            <div id="initText">
-                <p>Starting ATV Remote...</p>
-                <div style="text-align:center">
-                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                </div>
+
+                <div id="initText">
+                    <p>Starting ATV Remote...</p>
+                    <div style="text-align:center">
+                        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="main">
+            <div id="main">
 
             <div id="addNewElements">
                 <div id="loader">
@@ -72,77 +73,29 @@
                 </div>
             </div>
             <div id="runningElements">
-
                 <div id="keyMapElement"></div>
-                <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-1-4"></div>
-                    <div class="pure-u-1 pure-u-md-1-2">
-                        <table class="directionTable">
-                            <tr>
-                                <td>
-                                    <div data-key="volume_down" data-tippy-content="Lower Volume" class=" directionCircle volumeKeys"><span class='keyText'><i class="fas fa-volume-down"></i></span><span class='keyTextAlt'>-, _</span></div>
-                                </td>
-                                <td>
-                                    <div data-key="up" data-tippy-content="Up arrow" class="directionArrows directionCircle"><span class='keyText'><i class="fas fa-arrow-up"></i></span><span class='keyTextAlt'>Up</span></div>
-                                </td>
-                                <td>
-                                    <div data-key="volume_up" data-tippy-content="Raise Volume" class=" directionCircle volumeKeys"><span class='keyText'><i class="fas fa-volume-up"></i></span><span class='keyTextAlt'>+, =</span></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div data-key="left" class="directionArrows directionCircle"><span class='keyText'><i class="fas fa-arrow-left"></i></span><span class='keyTextAlt'>Left</span></div>
-                                </td>
-                                <td>
-                                    <div data-key="select" class="selectArrow directionArrows directionCircle"><span class='keyText'>Select</span><span class='keyTextAlt'>Enter</span></div>
-                                </td>
-                                <td>
-                                    <div data-key="right" class="directionArrows directionCircle"><span class='keyText'><i class="fas fa-arrow-right"></i></span><span class='keyTextAlt'>Right</span></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div data-key="skip_backward" class="directionCircle"><span class='keyText'>Prev</span><span class='keyTextAlt'>P, [</span></div>
-                                </td>
-                                <td>
-                                    <div data-key="down" class="directionArrows directionCircle"><span class='keyText'><i class="fas fa-arrow-down"></i></span><span class='keyTextAlt'>Down</span></div>
-                                </td>
-                                <td>
-                                    <div data-key="skip_forward" class="directionCircle"><span class='keyText'>Next</span><span class='keyTextAlt'>N, ]</span></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="directionCircle" data-key="play_pause"><span class='keyText'>Play</span><span class='keyTextAlt'>Space</span></div>
-                                </td>
-                                <td>
-                                    <div class="directionCircle menuButton" data-key="menu"><span class='keyText'>Menu</span><span class='keyTextAlt'>Esc, <i class="fas fa-backspace"></i></span></div>
-                                </td>
-                                <td>
-                                    <div class="directionCircle" data-key="home"><span class='keyText'>TV</span><span class='keyTextAlt'>T, L</span></div>
-                                </td>
-                            </tr>
-                        </table>
-
+                <div class="directionTable">
+                    <div class="touchSurface">
+                        <div data-key="up" data-tippy-content="Up arrow" class="directionArrows directionCircle touchButton touchUp"><span class='keyText'><i class="fas fa-arrow-up"></i></span><span class='keyTextAlt'>Up</span></div>
+                        <div data-key="left" class="directionArrows directionCircle touchButton touchLeft"><span class='keyText'><i class="fas fa-arrow-left"></i></span><span class='keyTextAlt'>Left</span></div>
+                        <div data-key="select" class="selectArrow directionArrows directionCircle touchButton touchCenter"><span class='keyText'>Select</span><span class='keyTextAlt'>Enter</span></div>
+                        <div data-key="right" class="directionArrows directionCircle touchButton touchRight"><span class='keyText'><i class="fas fa-arrow-right"></i></span><span class='keyTextAlt'>Right</span></div>
+                        <div data-key="down" class="directionArrows directionCircle touchButton touchDown"><span class='keyText'><i class="fas fa-arrow-down"></i></span><span class='keyTextAlt'>Down</span></div>
                     </div>
-                    <div class="pure-u-1 pure-u-md-1-4"></div>
-
-                    <div class="pure-u-1-12"></div>
-                    <div class="pure-u-5-6"></div>
-                    <div class="pure-u-1-12"></div>
+                    <div class="remoteCommandRow">
+                        <div data-key="volume_down" data-tippy-content="Lower Volume" class="directionCircle commandCircle volumeKeys"><span class='keyText'><i class="fas fa-volume-down"></i></span><span class='keyTextAlt'>-, _</span></div>
+                        <div data-key="play_pause" class="directionCircle commandCircle"><span class='keyText'>Play</span><span class='keyTextAlt'>Space</span></div>
+                        <div data-key="volume_up" data-tippy-content="Raise Volume" class="directionCircle commandCircle volumeKeys"><span class='keyText'><i class="fas fa-volume-up"></i></span><span class='keyTextAlt'>+, =</span></div>
+                    </div>
+                    <div class="remoteCommandRow">
+                        <div data-key="skip_backward" class="directionCircle commandCircle"><span class='keyText'>Prev</span><span class='keyTextAlt'>P, [</span></div>
+                        <div class="directionCircle commandCircle menuButton" data-key="menu"><span class='keyText'>Menu</span><span class='keyTextAlt'>Esc, <i class="fas fa-backspace"></i></span></div>
+                        <div data-key="skip_forward" class="directionCircle commandCircle"><span class='keyText'>Next</span><span class='keyTextAlt'>N, ]</span></div>
+                    </div>
+                    <div class="remoteCommandRow">
+                        <div class="directionCircle commandCircle" data-key="home"><span class='keyText'>TV</span><span class='keyTextAlt'>T, L</span></div>
+                    </div>
                 </div>
-
             </div>
 
 
@@ -151,12 +104,13 @@
             </div>
 
         </div>
-        <footer>
-            <div class="footer center">
-                <h2 id="statusText"></h2>
-                <div id="atvDropdownContainer"></div>
-            </div>
-        </footer>
+            <footer>
+                <div class="footer center">
+                    <h2 id="statusText"></h2>
+                    <div id="atvDropdownContainer"></div>
+                </div>
+            </footer>
+        </div>
     </body>
     <script src="web_remote.js"></script>
 
