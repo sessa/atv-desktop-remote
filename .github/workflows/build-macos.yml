@@ -20,6 +20,8 @@ jobs:
     name: Build and upload macOS artifact
     runs-on: macos-latest
     timeout-minutes: 45
+    env:
+      npm_config_legacy_peer_deps: "true"
 
     steps:
       - name: Checkout repository
@@ -45,10 +47,10 @@ jobs:
             ${{ runner.os }}-electron-
 
       - name: Install root dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Install app dependencies
-        run: npm ci --prefix app
+        run: npm ci --prefix app --legacy-peer-deps
 
       - name: Build unsigned macOS binaries
         env:
