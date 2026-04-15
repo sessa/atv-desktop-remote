@@ -17,57 +17,54 @@
     </script>
     <script src="js/tippy-headless.umd.min.js"></script>
     <script src="js/loader.js"></script>
-
-
-    <body class="remote-page">
-        <div class="remote-shell">
-            <div class="pure-g remote-top-row">
-                <div class="pure-u-1-2">
-                    <div id="alwaysOnTopWrapper">
-                        <span class="keyTextAlt">H - hide window</span>
-                    </div>
-                </div>
-                <div class="pure-u-1-2">
-                    <div id="exitLinkWrapper">
-                        <button id="exitLink" class="simpleButton"><span class="keyText">Quit</span><span class="keyTextAlt">Q (3x)</span></button>
-                    </div>
+</head>
+<body class="remote-page">
+    <div class="remote-shell">
+        <div class="pure-g remote-top-row">
+            <div class="pure-u-1-2">
+                <div id="alwaysOnTopWrapper">
+                    <span class="keyText topPill" aria-hidden="true"></span>
+                    <span class="keyTextAlt">H</span>
                 </div>
             </div>
-            <div class="center" id="keyboardButtonDiv">
-                <div class="topText">
-                    <span id="topTextHeader">ATV Remote</span>
-                </div>
-                <div id="topTextKBLink">
-                    <div onclick="openKeyboardClick(event)">
-                        <span class="keyTextAlt">K</span>
-                        <span class="keyText">Open Keyboard</span>
-                    </div>
-                </div>
-
-                <div id="initText">
-                    <p>Starting ATV Remote...</p>
-                    <div style="text-align:center">
-                        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                    </div>
+            <div class="pure-u-1-2">
+                <div id="exitLinkWrapper">
+                    <button id="exitLink" class="simpleButton"><span class="keyText">Quit</span><span class="keyTextAlt">Q (3x)</span></button>
                 </div>
             </div>
-            <div id="main">
+        </div>
+        <div class="center" id="keyboardButtonDiv">
+            <div class="topText">
+                <span id="topTextHeader">ATV Remote</span>
+            </div>
+            <div id="topTextKBLink">
+                <a href="#" class="keyboardLinkAction">
+                    <span class="keyTextAlt">K</span>
+                    <span class="keyText">Open Keyboard</span>
+                </a>
+            </div>
 
+            <div id="initText">
+                <p>Starting ATV Remote...</p>
+                <div style="text-align:center">
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
             <div id="addNewElements">
                 <div id="loader">
                     <div id="pairingLoader"></div>
                 </div>
                 <div id="pairingElements">
-
                     <div id="results">
                         <label for="atv_picker">Select a device to pair with. Your credentials will be saved for future use.</label>
                         <select id="atv_picker"></select>
                     </div>
                     <div id="pairCodeElements">
                         <label for="pairCode">Enter the 4 digit code here. This will be displayed on the device you selected.<br><span style="font-size:0.8em">Pairing <span id="pairProtocolName">Companion</span> credentials (pairing step <span id="pairStepNum">1</span> of 1)</span>
-                        <input id="pairCode" type="text" style="text-align: center" maxlength="4" />
+                        <input id="pairCode" type="text" maxlength="4" />
                     </label><button onclick="javascript:;" class="simpleButton" id="pairButton">Submit</button>
-                    
                     </div>
                     <button id="cancelPairing" class="simpleButton"><span class="keyText">Cancel</span><span class="keyTextAlt">Cancel</span></button>
                 </div>
@@ -76,13 +73,13 @@
                 <div id="keyMapElement"></div>
                 <div class="directionTable">
                     <div class="touchSurface">
-                        <div data-key="up" data-tippy-content="Up arrow" class="directionArrows directionCircle touchButton touchUp"><span class='keyText'><i class="fas fa-arrow-up"></i></span><span class='keyTextAlt'>Up</span></div>
-                        <div data-key="left" class="directionArrows directionCircle touchButton touchLeft"><span class='keyText'><i class="fas fa-arrow-left"></i></span><span class='keyTextAlt'>Left</span></div>
-                        <div data-key="select" class="selectArrow directionArrows directionCircle touchButton touchCenter"><span class='keyText'>Select</span><span class='keyTextAlt'>Enter</span></div>
-                        <div data-key="right" class="directionArrows directionCircle touchButton touchRight"><span class='keyText'><i class="fas fa-arrow-right"></i></span><span class='keyTextAlt'>Right</span></div>
-                        <div data-key="down" class="directionArrows directionCircle touchButton touchDown"><span class='keyText'><i class="fas fa-arrow-down"></i></span><span class='keyTextAlt'>Down</span></div>
+                        <div data-key="up" data-tippy-content="Up arrow" class="directionArrows directionCircle touchZone touchZoneUp"><span class='keyText'><i class="fas fa-chevron-up"></i></span><span class='keyTextAlt'>Up</span></div>
+                        <div data-key="left" class="directionArrows directionCircle touchZone touchZoneLeft"><span class='keyText'><i class="fas fa-chevron-left"></i></span><span class='keyTextAlt'>Left</span></div>
+                        <div data-key="select" class="selectArrow directionArrows directionCircle touchZone touchZoneCenter"><span class='keyText'>Select</span><span class='keyTextAlt'>Enter</span></div>
+                        <div data-key="right" class="directionArrows directionCircle touchZone touchZoneRight"><span class='keyText'><i class="fas fa-chevron-right"></i></span><span class='keyTextAlt'>Right</span></div>
+                        <div data-key="down" class="directionArrows directionCircle touchZone touchZoneDown"><span class='keyText'><i class="fas fa-chevron-down"></i></span><span class='keyTextAlt'>Down</span></div>
                     </div>
-                    <div class="remoteCommandRow">
+                    <div class="remoteCommandRow remoteCommandRowSmall">
                         <div data-key="volume_down" data-tippy-content="Lower Volume" class="directionCircle commandCircle volumeKeys"><span class='keyText'><i class="fas fa-volume-down"></i></span><span class='keyTextAlt'>-, _</span></div>
                         <div data-key="play_pause" class="directionCircle commandCircle"><span class='keyText'>Play</span><span class='keyTextAlt'>Space</span></div>
                         <div data-key="volume_up" data-tippy-content="Raise Volume" class="directionCircle commandCircle volumeKeys"><span class='keyText'><i class="fas fa-volume-up"></i></span><span class='keyTextAlt'>+, =</span></div>
@@ -93,25 +90,24 @@
                         <div data-key="skip_forward" class="directionCircle commandCircle"><span class='keyText'>Next</span><span class='keyTextAlt'>N, ]</span></div>
                     </div>
                     <div class="remoteCommandRow">
-                        <div class="directionCircle commandCircle" data-key="home"><span class='keyText'>TV</span><span class='keyTextAlt'>T, L</span></div>
+                        <div class="directionCircle commandCircle homeCommand" data-key="home"><span class='keyText'>TV</span><span class='keyTextAlt'>T, L</span></div>
                     </div>
                 </div>
             </div>
 
-
             <div id="cmdWrapper">
                 <div id="cmdFade"></div>
             </div>
-
         </div>
-            <footer>
-                <div class="footer center">
-                    <h2 id="statusText"></h2>
-                    <div id="atvDropdownContainer"></div>
-                </div>
-            </footer>
-        </div>
-    </body>
-    <script src="web_remote.js"></script>
+        <footer>
+            <div class="footer center">
+                <h2 id="statusText"></h2>
+                <div id="atvDropdownContainer"></div>
+            </div>
+            <div class="homeIndicator"></div>
+        </footer>
+    </div>
+</body>
+<script src="web_remote.js"></script>
 
 </html>

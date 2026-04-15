@@ -1,28 +1,27 @@
 :root {
-    --app-bg: #edf0f5;
-    --app-bg-soft: #e2e6ec;
-    --text: #111317;
-    --text-subtle: rgba(17, 19, 23, 0.68);
-    --remote-window-bg: radial-gradient(circle at 18% 10%, #f2f3f6 0%, #e6e9ee 46%, #dde1e8 100%);
-    --remote-shell-bg: linear-gradient(180deg, rgba(245, 247, 250, 0.96), rgba(229, 234, 241, 0.98));
-    --remote-shell-border: rgba(255, 255, 255, 0.8);
-    --remote-shell-shadow: 0 30px 60px rgba(18, 27, 38, 0.3);
-    --surface-bg: rgba(244, 246, 250, 0.92);
-    --surface-border: rgba(140, 156, 183, 0.34);
-    --touchpad-bg: linear-gradient(180deg, #eef1f5, #e5e9ee);
-    --touchpad-dot: rgba(101, 114, 135, 0.18);
-    --control-bg: linear-gradient(180deg, #f3f5f9, #e4e8ee);
-    --control-hover: linear-gradient(180deg, #ffffff, #e8edf4);
-    --control-border: rgba(116, 134, 161, 0.38);
-    --focus-ring: rgba(77, 130, 213, 0.38);
-    --button-text: #101824;
-    --command-shadow: 0 10px 20px rgba(24, 34, 46, 0.16);
+    --app-bg: #eceff3;
+    --text: #101216;
+    --text-subtle: rgba(16, 18, 22, 0.58);
+    --remote-window-bg: radial-gradient(circle at 18% 12%, #f5f6f8 0%, #e8ebf0 52%, #e2e6ec 100%);
+    --remote-shell-bg: linear-gradient(180deg, rgba(248, 249, 251, 0.96), rgba(236, 239, 244, 0.98));
+    --remote-shell-border: rgba(255, 255, 255, 0.78);
+    --remote-shell-shadow: 0 24px 55px rgba(22, 30, 42, 0.22);
+    --surface-bg: rgba(245, 247, 251, 0.92);
+    --surface-border: rgba(139, 151, 170, 0.28);
+    --touchpad-bg: linear-gradient(180deg, #f3f5f8, #e9edf3);
+    --touchpad-dot: rgba(101, 114, 135, 0.12);
+    --control-bg: linear-gradient(180deg, #f8f9fb, #e9edf3);
+    --control-hover: linear-gradient(180deg, #ffffff, #edf1f6);
+    --control-border: rgba(116, 134, 161, 0.3);
+    --focus-ring: rgba(87, 135, 214, 0.3);
+    --button-text: #141a24;
+    --command-shadow: 0 9px 18px rgba(23, 32, 45, 0.14);
 
     /* compatibility tokens used by other pages below */
-    --glass-bg: rgba(255, 255, 255, 0.74);
+    --glass-bg: rgba(255, 255, 255, 0.76);
     --glass-bg-strong: rgba(255, 255, 255, 0.92);
-    --glass-border: rgba(185, 196, 214, 0.78);
-    --glass-shadow: 0 18px 32px rgba(20, 30, 43, 0.2);
+    --glass-border: rgba(185, 196, 214, 0.72);
+    --glass-shadow: 0 16px 30px rgba(20, 30, 43, 0.16);
     --button-gradient: var(--control-bg);
     --button-hover: var(--control-hover);
     --circle-gradient: var(--control-bg);
@@ -30,29 +29,28 @@
 }
 
 .darkMode {
-    --app-bg: #15171c;
-    --app-bg-soft: #1b1e25;
-    --text: #f0f3f8;
-    --text-subtle: rgba(235, 239, 248, 0.65);
-    --remote-window-bg: radial-gradient(circle at 18% 10%, #2e333f 0%, #1f232d 42%, #171a22 100%);
-    --remote-shell-bg: linear-gradient(180deg, rgba(40, 45, 55, 0.97), rgba(29, 34, 44, 0.98));
-    --remote-shell-border: rgba(255, 255, 255, 0.12);
-    --remote-shell-shadow: 0 34px 68px rgba(0, 0, 0, 0.56);
-    --surface-bg: rgba(32, 37, 47, 0.9);
-    --surface-border: rgba(128, 143, 170, 0.2);
-    --touchpad-bg: linear-gradient(180deg, #232833, #1b1f29);
-    --touchpad-dot: rgba(164, 177, 203, 0.2);
-    --control-bg: linear-gradient(180deg, #2c3442, #242c39);
-    --control-hover: linear-gradient(180deg, #374153, #2a3341);
-    --control-border: rgba(143, 162, 194, 0.35);
-    --focus-ring: rgba(127, 170, 239, 0.42);
+    --app-bg: #14161b;
+    --text: #f1f4fa;
+    --text-subtle: rgba(237, 242, 251, 0.6);
+    --remote-window-bg: radial-gradient(circle at 18% 10%, #2d3139 0%, #1f232b 50%, #171a21 100%);
+    --remote-shell-bg: linear-gradient(180deg, rgba(40, 44, 53, 0.98), rgba(32, 36, 45, 0.98));
+    --remote-shell-border: rgba(255, 255, 255, 0.1);
+    --remote-shell-shadow: 0 28px 64px rgba(0, 0, 0, 0.5);
+    --surface-bg: rgba(31, 36, 45, 0.9);
+    --surface-border: rgba(129, 144, 167, 0.18);
+    --touchpad-bg: linear-gradient(180deg, #262b34, #1f242d);
+    --touchpad-dot: rgba(167, 179, 198, 0.14);
+    --control-bg: linear-gradient(180deg, #2c3340, #252c38);
+    --control-hover: linear-gradient(180deg, #363f4f, #2c3442);
+    --control-border: rgba(143, 162, 194, 0.28);
+    --focus-ring: rgba(130, 171, 240, 0.36);
     --button-text: #edf2fb;
-    --command-shadow: 0 12px 26px rgba(0, 0, 0, 0.38);
+    --command-shadow: 0 11px 22px rgba(0, 0, 0, 0.34);
 
     --glass-bg: rgba(29, 34, 42, 0.86);
     --glass-bg-strong: rgba(35, 40, 50, 0.92);
-    --glass-border: rgba(113, 128, 154, 0.4);
-    --glass-shadow: 0 20px 34px rgba(0, 0, 0, 0.45);
+    --glass-border: rgba(113, 128, 154, 0.36);
+    --glass-shadow: 0 19px 32px rgba(0, 0, 0, 0.38);
 }
 
 * {
@@ -147,6 +145,18 @@ a:active {
     line-height: 1;
 }
 
+.topPill {
+    display: inline-block;
+    width: 24px;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(66, 78, 96, 0.18);
+}
+
+.darkMode .topPill {
+    background: rgba(204, 218, 239, 0.22);
+}
+
 #alwaysOnTopCheck {
     margin: 0;
 }
@@ -224,13 +234,19 @@ a:active {
 }
 
 #topTextKBLink .keyText {
-    font-size: 2.1rem;
-    font-weight: 650;
+    font-size: 1.75rem;
+    font-weight: 620;
 }
 
 #topTextKBLink:hover {
     transform: translateY(-1px);
     background: var(--control-hover);
+}
+
+.keyboardLinkAction {
+    display: block;
+    color: inherit;
+    text-decoration: none;
 }
 
 #initText {
@@ -381,28 +397,28 @@ a:active {
     z-index: 2;
 }
 
-.touchButton {
+.touchZone {
     width: 68px;
     height: 68px;
     background: rgba(255, 255, 255, 0.74);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.darkMode .touchButton {
+.darkMode .touchZone {
     background: rgba(45, 54, 69, 0.92);
 }
 
-.touchUp {
+.touchZoneUp {
     left: calc(50% - 34px);
     top: 14px;
 }
 
-.touchLeft {
+.touchZoneLeft {
     left: 16px;
     top: calc(50% - 34px);
 }
 
-.touchCenter {
+.touchZoneCenter {
     left: calc(50% - 46px);
     top: calc(50% - 46px);
     width: 92px;
@@ -411,12 +427,12 @@ a:active {
     font-weight: 650;
 }
 
-.touchRight {
+.touchZoneRight {
     right: 16px;
     top: calc(50% - 34px);
 }
 
-.touchDown {
+.touchZoneDown {
     left: calc(50% - 34px);
     bottom: 14px;
 }
@@ -431,6 +447,12 @@ a:active {
     min-height: 74px;
 }
 
+.remoteCommandRowSmall .commandCircle {
+    width: 64px;
+    height: 64px;
+    font-size: 0.95rem;
+}
+
 .commandCircle {
     position: static;
     width: 72px;
@@ -443,6 +465,11 @@ a:active {
     height: 96px;
     font-size: 1.1rem;
     font-weight: 700;
+}
+
+.homeCommand {
+    width: 86px;
+    height: 86px;
 }
 
 .remoteCommandRow:last-child {
@@ -560,6 +587,18 @@ footer {
     border: 1px solid var(--surface-border);
 }
 
+.homeIndicator {
+    width: 122px;
+    height: 5px;
+    border-radius: 999px;
+    margin: 14px auto 0;
+    background: rgba(70, 80, 96, 0.35);
+}
+
+.darkMode .homeIndicator {
+    background: rgba(228, 236, 252, 0.5);
+}
+
 #statusText {
     display: none;
     position: static;
@@ -630,31 +669,31 @@ footer {
         height: 220px;
     }
 
-    .touchButton {
+    .touchZone {
         width: 58px;
         height: 58px;
     }
 
-    .touchUp {
+    .touchZoneUp {
         left: calc(50% - 29px);
     }
 
-    .touchLeft {
+    .touchZoneLeft {
         top: calc(50% - 29px);
     }
 
-    .touchCenter {
+    .touchZoneCenter {
         left: calc(50% - 40px);
         top: calc(50% - 40px);
         width: 80px;
         height: 80px;
     }
 
-    .touchRight {
+    .touchZoneRight {
         top: calc(50% - 29px);
     }
 
-    .touchDown {
+    .touchZoneDown {
         left: calc(50% - 29px);
     }
 
@@ -664,14 +703,25 @@ footer {
         font-size: 0.94rem;
     }
 
+    .remoteCommandRowSmall .commandCircle {
+        width: 56px;
+        height: 56px;
+        font-size: 0.85rem;
+    }
+
     .menuButton {
         width: 84px;
         height: 84px;
         font-size: 1rem;
     }
 
+    .homeCommand {
+        width: 76px;
+        height: 76px;
+    }
+
     #topTextKBLink .keyText {
-        font-size: 1.55rem;
+        font-size: 1.38rem;
     }
 }
 
